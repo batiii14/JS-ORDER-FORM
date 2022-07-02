@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!--
+      LAB 1 PRACTICE FILE
+   -->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <title>LAB 1 PRACTICE</title>
+   <link rel="stylesheet" href="styles.css" />
+   <script src="modernizr.custom.05819.js"></script>
+   <script>
+    function disp(){
+    
+      addEventListener('submit',function(event){
+        event.preventDefault();
+        var name=(document.getElementById('nameinput').value);
+      var indate=parseInt(document.getElementById('indate').value);
+      var inmonth=document.getElementById('inmonth').value;
+      var inyear=parseInt(document.getElementById('inyear').value);
+      var outdate=parseInt(document.getElementById('outdate').value);
+      var outmonth=document.getElementById('outmonth').value;
+      var outyear=parseInt(document.getElementById('outyear').value);
+  
+  
+      var message="Thank you Ms/Mr. "+ name + " for ordering from ABC Incorporation. The pick up and drop off information are as following: "+ "Pickup Date: "+ indate+"-"+inmonth+"-" + inyear +" "+"Dropoff Date: " +outdate+"-"+outmonth +"-"+outyear;
+      document.getElementById('info_span').innerHTML=message;
+  
+      })
+  
+    }
+  </script>
+   
+</head>
+
+<body>
+   <header>
+      <h1>
+         ORDER FORM
+      </h1>
+   </header>
+
+   <article>
+      <h2>Order Form</h2>
+      <form>
+        <fieldset id="contactinfo">
+          <legend><span>Contact Information</span></legend>
+          <label for="nameinput">
+            Name
+            <input type="text" id="nameinput" name="name" required/>
+          </label>
+          <label for="emailinput">
+            Email
+            <input type="email" id="emailinput" name="email" required/>
+          </label>
+          <label for="phoneinput">
+            Phone
+            <input type="text" id="phoneinput" name="phone" required />
+          </label>
+        </fieldset>
+        <fieldset id="reserveinfo" required>
+          <legend><span>Reservation Information</span></legend>
+          <fieldset id="checkin">
+            <legend>Pickup date</legend>
+            <select id="inmonth" name="inmonth">
+              <option value="01">January</option>
+              <option value="02">February</option>
+              <option value="03">March</option>
+              <option value="04">April</option>
+              <option value="05">May</option>
+              <option value="06">June</option>
+              <option value="07">July</option>
+              <option value="08">August</option>
+              <option value="09">September</option>
+              <option value="10">October</option>
+              <option value="11">November</option>
+              <option value="12">December</option>
+            </select>
+            <select id="indate" name="indate">
+              <option value="01">1</option>
+              <option value="02">2</option>
+              <option value="03">3</option>
+              <option value="04">4</option>
+              <option value="05">5</option>
+              <option value="06">6</option>
+              <option value="07">7</option>
+              <option value="08">8</option>
+              <option value="09">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28">28</option>
+              <option value="29">29</option>
+              <option value="30">30</option>
+              <option value="31">31</option>
+            </select>
+            <select id="inyear" name="inyear">
+              <option value="2017">2017</option>
+              <option value="2018">2018</option>
+              <option value="2019">2019</option>
+            </select>
+          </fieldset>
+          <fieldset id="checkout">
+            <legend>Dropoff date</legend>
+            <select id="outmonth" name="outmonth">
+              <option value="01">January</option>
+              <option value="02">February</option>
+              <option value="03">March</option>
+              <option value="04">April</option>
+              <option value="05">May</option>
+              <option value="06">June</option>
+              <option value="07">July</option>
+              <option value="08">August</option>
+              <option value="09">September</option>
+              <option value="10">October</option>
+              <option value="11">November</option>
+              <option value="12">December</option>
+            </select>
+            <select id="outdate" name="outdate">
+              <option value="01">1</option>
+              <option value="02">2</option>
+              <option value="03">3</option>
+              <option value="04">4</option>
+              <option value="05">5</option>
+              <option value="06">6</option>
+              <option value="07">7</option>
+              <option value="08">8</option>
+              <option value="09">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28">28</option>
+              <option value="29">29</option>
+              <option value="30">30</option>
+              <option value="31">31</option>
+            </select>
+            <select id="outyear" name="outyear">
+              <option value="2017">2017</option>
+              <option value="2018">2018</option>
+              <option value="2019">2019</option>
+            </select>
+          </fieldset>
+        </fieldset>
+        <fieldset id="submitbutton">
+          <input type="submit" value="Submit" onclick="disp();" />
+        </fieldset>
+     </form>
+    
+   </article>
+   
+   <div id="info_span"></div>
+</body>
+
+</html>
